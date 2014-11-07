@@ -112,4 +112,15 @@ public class TicketMachine
         amountLeftToPay = price - balance;
         return amountLeftToPay;
     }
+    
+    /*
+     * Añadir metodo que simule vaciar la maquina de todas las monedas
+     * que hay en ella y que devuelva la cantidad de dinero que habia en la maquina
+     */
+    public int getEmptyMachine()
+    {
+        int amountMoney = total;
+        total = 0;
+        return amountMoney;
+    }
 }
