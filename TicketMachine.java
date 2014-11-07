@@ -68,6 +68,8 @@ public class TicketMachine
     public void printTicket()
     {
         if(balance >= price) {
+            
+            String mensaje;
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
@@ -98,5 +100,16 @@ public class TicketMachine
         amountToRefund = balance;
         balance = 0;
         return amountToRefund;
+    }
+    
+    /*
+     * Devuelve el dinero que hace falta meter
+     * para poder imprimir un ticket
+     */
+    public int getAmountLeftToPay()
+    {
+        int amountLeftToPay;
+        amountLeftToPay = price - balance;
+        return amountLeftToPay;
     }
 }
