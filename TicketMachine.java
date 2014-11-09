@@ -59,8 +59,8 @@ public class TicketMachine
                                amount);
         }
     }
-
-    /**
+    
+        /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
      * an error message if more money is required.
@@ -68,8 +68,6 @@ public class TicketMachine
     public void printTicket()
     {
         if(balance >= price) {
-            
-            String mensaje;
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
@@ -83,12 +81,15 @@ public class TicketMachine
             // Reduce the balance by the prince.
             balance = balance - price;
         }
-        else {
+        //Insertar mas dinero
+        else
+        {
+            int amountLeftToPay = price - balance;
             System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
-                    
+                amountLeftToPay + " more cents.");
         }
     }
+
 
     /**
      * Return the money in the balance.
