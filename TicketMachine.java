@@ -89,6 +89,33 @@ public class TicketMachine
                 amountLeftToPay + " more cents.");
         }
     }
+    
+     /**
+     * Comprar ticket con un 10% de descuento
+     */
+    public void printTicketDescuento()
+    {
+        int priceDescuento = ((price*90)/100);
+        if(balance >= priceDescuento) {
+            // Simulate the printing of a ticket.
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket");
+            System.out.println("# " + priceDescuento + " cents. ");
+            System.out.println("##################");
+            System.out.println();
+
+            total = total + priceDescuento;
+            
+            balance = balance - priceDescuento;
+        }
+        else {
+            int amountLeftToPay = priceDescuento - balance;
+            System.out.println("You must insert at least: " +
+                               amountLeftToPay + " more cents.");
+                    
+        }
+    }
 
 
     /**
